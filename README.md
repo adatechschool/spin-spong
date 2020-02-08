@@ -1,3 +1,3 @@
 # Spin Spong
 
-* A spong game about spinning paddles.
+* A spong game about spinning paddles. Adriel is a genius. At times.
