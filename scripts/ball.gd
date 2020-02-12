@@ -1,10 +1,13 @@
 extends RigidBody2D
 
 export var max_speed = 300
+export var min_speed = 30
 
 func _ready():
-	set_axis_velocity(max_speed * Vector2.LEFT / 3)
+	linear_velocity = Vector2.LEFT * max_speed / 3
 
 func _integrate_forces(_state):
-	if linear_velocity.length() > max_speed:
-		linear_velocity = linear_velocity.normalized() * max_speed
+	linear_velocity = linear_velocity.clamped(max_speed)
+
+	if linear_velocity.length() < min_speed:
+		linear_velocity = linear_velocity.normalized() * min_speed
