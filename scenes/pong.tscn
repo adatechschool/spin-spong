@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/paddle.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ball.tscn" type="PackedScene" id=4]
 
-[node name="pong" type="Node2D"]
+[node name="pong" type="Node"]
 script = ExtResource( 1 )
 
 [node name="border" parent="." instance=ExtResource( 2 )]
@@ -15,6 +15,3 @@ position = Vector2( 40, 135 )
 
 [node name="ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 240, 135 )
-linear_velocity = Vector2( -100, -300 )
-linear_damp = 0.0
-angular_damp = 0.0
