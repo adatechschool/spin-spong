@@ -11,7 +11,9 @@ script = ExtResource( 1 )
 [node name="border" parent="." instance=ExtResource( 2 )]
 
 [node name="adriel" parent="." instance=ExtResource( 3 )]
-position = Vector2( 40, 135 )
+position = Vector2( 38.049, 135 )
+speed = 1200
+rotation_speed = 12000
 
 [node name="ball" parent="." instance=ExtResource( 4 )]
 position = Vector2( 240, 135 )

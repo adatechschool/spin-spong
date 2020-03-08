@@ -3,8 +3,8 @@
 [ext_resource path="res://scenes/paddleBox.gd" type="Script" id=1]
 [ext_resource path="res://sprites/paddle.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 40.163
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.79037, 48.1166 )
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 3.96334
