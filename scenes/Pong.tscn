@@ -9,10 +9,20 @@
 [node name="Pong" type="Node"]
 script = ExtResource( 3 )
 
-[node name="Border" parent="." instance=ExtResource( 2 )]
+[node name="PaddleLuc" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 135 )
+up = "luc_goes_up"
+down = "luc_goes_down"
 
 [node name="PaddleAdriel" parent="." instance=ExtResource( 5 )]
-position = Vector2( 38.049, 135 )
+position = Vector2( 435, 135 )
+up = "adriel_goes_up"
+down = "adriel_goes_down"
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 135 )
+min_speed = 300
+max_speed = 200
 
 [node name="ScoreLuc" parent="." instance=ExtResource( 4 )]
 scale = Vector2( 1, 270 )
@@ -25,7 +35,4 @@ scale = Vector2( 1, 270 )
 position = Vector2( 240, 0 )
 scale = Vector2( 1, 270 )
 
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 240, 135 )
-min_speed = 300
-max_speed = 200
+[node name="Border" parent="." instance=ExtResource( 2 )]
