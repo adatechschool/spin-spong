@@ -1,25 +1,20 @@
 extends Node
 
-var score := 0
-
-
 func _ready():
-	$SpotAdriel.connect("body_entered", self, "touch_adriel")
-	$SpotLuc.connect("body_entered", self, "touch_luc")
+	$ScoreLuc.connect("body_entered", self, "adriel_touched")
+	$ScoreAdriel.connect("body_entered", self, "luc_touched")
+	$ScoreLock.connect("body_entered", self, "reset_lock")
 
 
-func _input(event):
-	if event.is_action_pressed("pong_restart"):
-		restart_game()
+func adriel_touched(_body: GenericBall):
+	Score.safe_increase()
+	Score.get_score()
 
 
-func touch_adriel(_body):
-	print("adriel: ouch!")
+func luc_touched(_body: GenericBall):
+	Score.safe_decrease()
+	Score.get_score()
 
 
-func touch_luc(_body):
-	print("luc: ouch!")
-
-
-func restart_game():
-	get_tree().reload_current_scene()
+func reset_lock(_body: GenericBall):
+	Score.unlock()

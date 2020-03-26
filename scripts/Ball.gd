@@ -1,3 +1,4 @@
+class_name GenericBall
 extends RigidBody2D
 
 export var min_speed: int

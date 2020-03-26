@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "RigidBody2D",
+"class": "GenericBall",
+"language": "GDScript",
+"path": "res://scripts/Ball.gd"
+} ]
 _global_script_class_icons={
-
+"GenericBall": ""
 }
 
 [application]
@@ -19,6 +24,14 @@ config/name="Spin Spong"
 config/description="A spong game about a spinning paddle."
 run/main_scene="res://scenes/Pong.tscn"
 config/icon="res://icon.png"
+
+[audio]
+
+default_bus_layout=""
+
+[autoload]
+
+Score="*res://scripts/Score.gd"
 
 [display]
 
