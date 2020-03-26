@@ -1,19 +1,20 @@
 extends Node
 
 func _ready():
-	$ScoreLuc.connect("body_entered", self, "adriel_touched")
-	$ScoreAdriel.connect("body_entered", self, "luc_touched")
-	$ScoreLock.connect("body_entered", self, "reset_lock")
+	if $ScoreLuc.connect("body_entered", self, "adriel_touched"):
+		printerr("unable to connect 'body_entered' from 'ScoreLuc'")
+	if $ScoreAdriel.connect("body_entered", self, "luc_touched"):
+		printerr("unable to connect 'body_entered' from 'ScoreAdriel'")
+	if $ScoreLock.connect("body_entered", self, "reset_lock"):
+		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
 
 func adriel_touched(_body: GenericBall):
 	Score.safe_increase()
-	Score.get_score()
 
 
 func luc_touched(_body: GenericBall):
 	Score.safe_decrease()
-	Score.get_score()
 
 
 func reset_lock(_body: GenericBall):
