@@ -3,7 +3,7 @@ extends RigidBody2D
 export var speed = 2000
 export var rotation_speed = 9000
 
-onready var paddle = $paddle as RigidBody2D
+onready var paddle := $Paddle as RigidBody2D
 
 var input = 0
 

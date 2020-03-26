@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Spin Spong"
-run/main_scene="res://scenes/pong.tscn"
+run/main_scene="res://scenes/Pong.tscn"
 config/icon="res://icon.png"
 
 [display]
