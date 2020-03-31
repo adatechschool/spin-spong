@@ -9,29 +9,33 @@
 [node name="Pong" type="Node"]
 script = ExtResource( 3 )
 
-[node name="PaddleLuc" parent="." instance=ExtResource( 5 )]
-position = Vector2( 40, 135 )
-up = "luc_goes_up"
-down = "luc_goes_down"
-
-[node name="PaddleAdriel" parent="." instance=ExtResource( 5 )]
-position = Vector2( 435, 135 )
-up = "adriel_goes_up"
-down = "adriel_goes_down"
-
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 240, 135 )
 min_speed = 300
 max_speed = 200
 
-[node name="ScoreLuc" parent="." instance=ExtResource( 4 )]
-scale = Vector2( 1, 270 )
+[node name="Paddles" type="Node" parent="."]
 
-[node name="ScoreAdriel" parent="." instance=ExtResource( 4 )]
+[node name="PaddleAdriel" parent="Paddles" instance=ExtResource( 5 )]
+position = Vector2( 435, 135 )
+up = "adriel_goes_up"
+down = "adriel_goes_down"
+
+[node name="PaddleLuc" parent="Paddles" instance=ExtResource( 5 )]
+position = Vector2( 40, 135 )
+up = "luc_goes_up"
+down = "luc_goes_down"
+
+[node name="ScoreHandlers" type="Node" parent="."]
+
+[node name="ScoreAdriel" parent="ScoreHandlers" instance=ExtResource( 4 )]
 position = Vector2( 479, 0 )
 scale = Vector2( 1, 270 )
 
-[node name="ScoreLock" parent="." instance=ExtResource( 4 )]
+[node name="ScoreLuc" parent="ScoreHandlers" instance=ExtResource( 4 )]
+scale = Vector2( 1, 270 )
+
+[node name="ScoreLock" parent="ScoreHandlers" instance=ExtResource( 4 )]
 position = Vector2( 240, 0 )
 scale = Vector2( 1, 270 )
 
