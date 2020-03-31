@@ -2,8 +2,8 @@ extends RigidBody2D
 
 export var speed := 2000
 export var rotation_speed := 9000
-export var up: String
-export var down: String
+export(String) var up
+export(String) var down
 
 var input := 0
 
