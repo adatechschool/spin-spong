@@ -31,7 +31,7 @@ default_bus_layout=""
 
 [autoload]
 
-Score="*res://scripts/Score.gd"
+Score="*res://scripts/util/Score.gd"
 
 [display]
 
