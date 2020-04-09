@@ -13,10 +13,14 @@ func _ready():
 
 func adriel_touched(_body: GenericBall):
 	Score.safe_increase()
+	if Score.increase_did_reach_target():
+		Score.reset()
 
 
 func luc_touched(_body: GenericBall):
 	Score.safe_decrease()
+	if Score.decrease_did_reach_target():
+		Score.reset()
 
 
 func reset_lock(_body: GenericBall):
