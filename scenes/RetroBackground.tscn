@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/background_overlay.png" type="Texture" id=1]
+[ext_resource path="res://sprites/background.png" type="Texture" id=2]
+
+[node name="RetroBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="Background" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = -240.0
+margin_right = 720.0
+margin_bottom = 270.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" type="ParallaxLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Overlay"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
