@@ -13,6 +13,7 @@ script = ExtResource( 3 )
 position = Vector2( 240, 135 )
 min_speed = 300
 max_speed = 200
+color = Color( 0, 1, 1, 1 )
 
 [node name="Paddles" type="Node" parent="."]
 
@@ -20,11 +21,13 @@ max_speed = 200
 position = Vector2( 435, 135 )
 up = "adriel_goes_up"
 down = "adriel_goes_down"
+color = Color( 1, 0, 1, 1 )
 
 [node name="PaddleLuc" parent="Paddles" instance=ExtResource( 5 )]
 position = Vector2( 40, 135 )
 up = "luc_goes_up"
 down = "luc_goes_down"
+color = Color( 0, 1, 0, 1 )
 
 [node name="ScoreHandlers" type="Node" parent="."]
 
