@@ -16,7 +16,7 @@ func _ready():
 	if Score.connect("increased", $RetroBackground, "move_left"):
 		printerr("unable to connect 'increased' to 'RetroBackground'")
 
-	if Score.connect("resetted", $RetroBackground, "reset"):
+	if Score.connect("reset", $RetroBackground, "reset"):
 		printerr("unable to connect 'resetted' to 'RetroBackground'")
 
 

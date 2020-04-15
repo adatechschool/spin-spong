@@ -2,7 +2,7 @@ extends Node
 
 signal increased
 signal decreased
-signal resetted
+signal reset
 signal locked
 signal unlocked
 
@@ -13,7 +13,7 @@ var locked := true
 
 func reset():
 	score = 0
-	emit_signal("resetted")
+	emit_signal("reset")
 	print(score)
 
 
