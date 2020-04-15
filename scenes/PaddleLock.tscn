@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Lock.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Paddle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ShaderColor.shader" type="Shader" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.79037, 48.1166 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/targ_color = Plane( 1, 1, 1, 1 )
 
 [node name="PaddleLock" type="RigidBody2D"]
 collision_mask = 4
@@ -13,6 +19,7 @@ gravity_scale = 0.0
 linear_damp = 8.0
 angular_damp = 4.0
 script = ExtResource( 1 )
+rotation_direction = 1
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -23,3 +30,4 @@ update_rotation = false
 update_scale = false
 
 [node name="Paddle" parent="." instance=ExtResource( 2 )]
+material = SubResource( 2 )
