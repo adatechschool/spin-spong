@@ -13,7 +13,6 @@ const rotation_speed := 9000
 onready var paddle := $Paddle as PhysicsBody2D
 
 func _ready():
-	print(rotation_direction)
 	paddle.material.set_shader_param("targ_color", color)
 
 func _integrate_forces(_state):

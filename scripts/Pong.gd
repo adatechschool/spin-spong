@@ -10,6 +10,15 @@ func _ready():
 	if $ScoreHandlers/ScoreLock.connect("body_entered", self, "reset_lock"):
 		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
+	if Score.connect("decreased", $RetroBackground, "move_right"):
+		printerr("unable to connect 'decreased' to 'RetroBackground'")
+
+	if Score.connect("increased", $RetroBackground, "move_left"):
+		printerr("unable to connect 'increased' to 'RetroBackground'")
+
+	if Score.connect("resetted", $RetroBackground, "reset"):
+		printerr("unable to connect 'resetted' to 'RetroBackground'")
+
 
 func adriel_touched(_body: GenericBall):
 	Score.safe_increase()
