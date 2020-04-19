@@ -1,13 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ball.png" type="Texture" id=2]
-[ext_resource path="res://ShaderColor.shader" type="Shader" id=3]
-
-
-[sub_resource type="ShaderMaterial" id=3]
-shader = ExtResource( 3 )
-shader_param/targ_color = Plane( 1, 1, 1, 1 )
+[ext_resource path="res://ShaderColor.material" type="Material" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -17,7 +12,7 @@ bounce = 1.0
 radius = 6.72109
 
 [node name="ball" type="RigidBody2D"]
-material = SubResource( 3 )
+material = ExtResource( 3 )
 collision_layer = 8
 collision_mask = 6
 mode = 2
