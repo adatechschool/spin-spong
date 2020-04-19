@@ -10,29 +10,30 @@ func reset():
 	score = 0
 
 
-func lock():
-	locked = true
-func unlock():
-	locked = false
-
-
-func increase():
-	score += 1
-func decrease():
-	score -= 1
+func maybe_reset():
+	if abs(score) >= target:
+		score = 0
 
 
 func safe_increase():
-	if not locked:
-		self.increase()
-	self.lock()
+	change_score_by(1)
+	maybe_reset()
+
+
 func safe_decrease():
+	change_score_by(-1)
+	maybe_reset()
+
+
+func change_score_by(a: int):
 	if not locked:
-		self.decrease()
-	self.lock()
+		score += a
+	lock()
 
 
-func increase_did_reach_target() -> bool:
-	return score >= target
-func decrease_did_reach_target() -> bool:
-	return - score >= target
+func lock():
+	locked = true
+
+
+func unlock():
+	locked = false

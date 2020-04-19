@@ -13,15 +13,11 @@ func _ready():
 
 func adriel_touched(_body: GenericBall):
 	Score.safe_decrease()
-	if Score.decrease_did_reach_target():
-		Score.reset()
 	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
 func luc_touched(_body: GenericBall):
 	Score.safe_increase()
-	if Score.increase_did_reach_target():
-		Score.reset()
 	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
