@@ -1,12 +1,8 @@
 extends ParallaxBackground
 
 
-func move_left():
-	$Background.position.x -= 24 * 3
-
-
-func move_right():
-	$Background.position.x += 24 * 3
+func glide_to(coeff: float):
+	$Background.position.x = coeff * OS.get_window_size().x / 4
 
 
 func reset():

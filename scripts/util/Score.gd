@@ -6,7 +6,7 @@ signal reset
 signal locked
 signal unlocked
 
-const target := 3
+const target := 11
 var score := 0
 var locked := true
 
