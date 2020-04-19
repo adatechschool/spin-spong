@@ -3,7 +3,7 @@ extends RigidBody2D
 
 export var min_speed: int
 export var max_speed: int
-export (Color) var color
+export(Color) var color
 
 func _ready():
 	linear_velocity = Vector2.LEFT

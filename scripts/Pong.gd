@@ -10,22 +10,19 @@ func _ready():
 	if $ScoreHandlers/ScoreLock.connect("body_entered", self, "reset_lock"):
 		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
-	if Score.connect("reset", $RetroBackground, "reset"):
-		printerr("unable to connect 'resetted' to 'RetroBackground'")
-
 
 func adriel_touched(_body: GenericBall):
 	Score.safe_decrease()
-	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 	if Score.decrease_did_reach_target():
 		Score.reset()
+	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
 func luc_touched(_body: GenericBall):
 	Score.safe_increase()
-	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 	if Score.increase_did_reach_target():
 		Score.reset()
+	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
 func reset_lock(_body: GenericBall):
