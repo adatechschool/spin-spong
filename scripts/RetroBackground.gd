@@ -9,4 +9,4 @@ func _process(delta):
 
 
 func glide_to(coeff: float):
-	target = coeff * OS.get_window_size().x / 4
+	target = coeff * get_tree().root.size.x / 2
