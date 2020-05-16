@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/Ball.gd" type="Script" id=1]
 [ext_resource path="res://sprites/ball.png" type="Texture" id=2]
 [ext_resource path="res://ShaderColor.material" type="Material" id=3]
+[ext_resource path="res://sprites/ballPartW.png" type="Texture" id=4]
+[ext_resource path="res://BlendAdd.tres" type="Material" id=5]
+[ext_resource path="res://sprites/ballPart2W.png" type="Texture" id=6]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -10,6 +13,17 @@ bounce = 1.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 6.72109
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.646753, 0.345455 ), -0.874999, -0.874999, 0, 0, Vector2( 0.994805, 0.0909091 ), -0.175, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.179558, 0.997238 )
+colors = PoolColorArray( 0, 1, 1, 0.392157, 0, 1, 1, 0.352941, 0.992157, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0.00276243, 1 )
+colors = PoolColorArray( 0, 0.774414, 1, 0.470588, 0, 0.258824, 1, 0.0392157 )
 
 [node name="ball" type="RigidBody2D"]
 material = ExtResource( 3 )
@@ -34,3 +48,33 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="trailSmall" type="CPUParticles2D" parent="."]
+material = ExtResource( 5 )
+amount = 50
+lifetime = 0.4
+lifetime_randomness = 1.0
+local_coords = false
+texture = ExtResource( 6 )
+emission_shape = 1
+emission_sphere_radius = 5.0
+gravity = Vector2( 0, 0 )
+linear_accel = -24.24
+angle_random = 1.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 5 )
+
+[node name="trailBig" type="CPUParticles2D" parent="."]
+material = ExtResource( 5 )
+amount = 24
+lifetime = 0.7
+local_coords = false
+texture = ExtResource( 4 )
+emission_shape = 1
+emission_sphere_radius = 5.0
+gravity = Vector2( 0, 0 )
+linear_accel = -24.24
+scale_amount_random = 0.3
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
