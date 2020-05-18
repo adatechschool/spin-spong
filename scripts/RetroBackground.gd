@@ -10,7 +10,3 @@ func _process(delta):
 
 func display_score(coeff: float):
 	target = coeff * get_tree().root.size.x / 2
-
-
-func reset_display():
-	display_score(0)
