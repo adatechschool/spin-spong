@@ -29,10 +29,6 @@ config/icon="res://icon.png"
 
 default_bus_layout=""
 
-[autoload]
-
-Score="*res://scripts/util/Score.gd"
-
 [display]
 
 window/size/width=480
