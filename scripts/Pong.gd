@@ -1,5 +1,13 @@
 extends Node
 
+const target: = 3
+var score: = 0
+var locked: = true
+
+func maybe_reset():
+	if abs(score) >= target:
+		score = 0
+
 func _ready():
 	if $ScoreHandlers/ScoreLuc.connect("body_entered", self, "adriel_touched"):
 		printerr("unable to connect 'body_entered' from 'ScoreLuc'")
@@ -11,15 +19,23 @@ func _ready():
 		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
 
-func adriel_touched(_body: GenericBall):
-	Score.safe_decrease()
-	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
+func adriel_touched(_body: Ball):
+	score(-1)
 
 
-func luc_touched(_body: GenericBall):
-	Score.safe_increase()
-	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
+func luc_touched(_body: Ball):
+	score(1)
 
 
-func reset_lock(_body: GenericBall):
-	Score.unlock()
+func reset_lock(_body: Ball):
+	locked = false
+	if abs(score) >= target:
+		score = 0
+		$Ball.pause()
+
+
+func score(point):
+	if not locked:
+		score += point
+		locked = true
+	$RetroBackground.display_score(float(score) / float(target))

@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "RigidBody2D",
-"class": "GenericBall",
+"class": "Ball",
 "language": "GDScript",
 "path": "res://scripts/Ball.gd"
 } ]
 _global_script_class_icons={
-"GenericBall": ""
+"Ball": ""
 }
 
 [application]
@@ -28,10 +28,6 @@ config/icon="res://icon.png"
 [audio]
 
 default_bus_layout=""
-
-[autoload]
-
-Score="*res://scripts/util/Score.gd"
 
 [display]
 
