@@ -42,7 +42,6 @@ scale = Vector2( 1, 270 )
 position = Vector2( 240, 135 )
 min_speed = 300
 max_speed = 200
-color = Color( 0, 1, 1, 1 )
 
 [node name="Border" parent="." instance=ExtResource( 2 )]
 
