@@ -19,13 +19,13 @@ func _process(_delta):
 
 
 func _integrate_forces(_state):
-	if pause_direction:
-		linear_velocity = Vector2.ZERO
-	else:
+	if pause_direction == Vector2.ZERO:
 		linear_velocity = linear_velocity.clamped(max_speed)
 	
 		if linear_velocity.length() < min_speed:
 			linear_velocity = linear_velocity.normalized() * min_speed
+	else:
+		linear_velocity = Vector2.ZERO
 
 
 func pause():
@@ -33,5 +33,6 @@ func pause():
 
 
 func resume():
-	linear_velocity = pause_direction
-	pause_direction = Vector2.ZERO
+	if pause_direction:
+		linear_velocity = pause_direction
+		pause_direction = Vector2.ZERO
