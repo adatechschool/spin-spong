@@ -4,9 +4,6 @@ const target: = 3
 var score: = 0
 var locked: = true
 
-func maybe_reset():
-	if abs(score) >= target:
-		score = 0
 
 func _ready():
 	if $ScoreHandlers/ScoreLuc.connect("body_entered", self, "adriel_touched"):
@@ -21,6 +18,14 @@ func _ready():
 	if $Ball.connect("resumed", $RetroBackground, "reset_display"):
 		printerr("unable to connect 'resumed' from 'Ball'")
 
+
+func _process(delta):
+	if Input.is_key_pressed(KEY_R):
+		get_tree().reload_current_scene()
+	if Input.is_key_pressed(KEY_PLUS):
+		score(2)
+	if Input.is_key_pressed(KEY_MINUS):
+		score(-2)
 
 func adriel_touched(_body: Ball):
 	score(-1)
