@@ -22,10 +22,10 @@ func _ready():
 func _process(delta):
 	if Input.is_key_pressed(KEY_R):
 		get_tree().reload_current_scene()
-	if Input.is_action_just_pressed("increase"):
+	if Input.is_action_just_pressed("increase") and score < target - 1:
 		reset_lock(null)
 		score(1)
-	if Input.is_action_just_pressed("decrease"):
+	if Input.is_action_just_pressed("decrease") and -score < target - 1:
 		reset_lock(null)
 		score(-1)
 
