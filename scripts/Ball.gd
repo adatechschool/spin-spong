@@ -20,7 +20,7 @@ func _process(_delta):
 
 func _integrate_forces(_state):
 	if pause_direction:
-		linear_velocity = linear_velocity * 0.91
+		linear_velocity = Vector2.ZERO
 	else:
 		linear_velocity = linear_velocity.clamped(max_speed)
 	
