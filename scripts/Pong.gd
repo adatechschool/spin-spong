@@ -11,15 +11,15 @@ func _ready():
 		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
 
-func adriel_touched(_body: GenericBall):
+func adriel_touched(_body: Ball):
 	Score.safe_decrease()
 	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
-func luc_touched(_body: GenericBall):
+func luc_touched(_body: Ball):
 	Score.safe_increase()
 	$RetroBackground.glide_to(float(Score.score) / float(Score.target))
 
 
-func reset_lock(_body: GenericBall):
+func reset_lock(_body: Ball):
 	Score.unlock()
