@@ -22,10 +22,12 @@ func _ready():
 func _process(delta):
 	if Input.is_key_pressed(KEY_R):
 		get_tree().reload_current_scene()
-	if Input.is_key_pressed(KEY_PLUS):
-		score(2)
-	if Input.is_key_pressed(KEY_MINUS):
-		score(-2)
+	if Input.is_action_just_pressed("increase"):
+		reset_lock(null)
+		score(1)
+	if Input.is_action_just_pressed("decrease"):
+		reset_lock(null)
+		score(-1)
 
 func adriel_touched(_body: Ball):
 	score(-1)
