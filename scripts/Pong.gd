@@ -18,6 +18,9 @@ func _ready():
 	if $ScoreHandlers/ScoreLock.connect("body_entered", self, "reset_lock"):
 		printerr("unable to connect 'body_entered' from 'ScoreLock'")
 
+	if $Ball.connect("resumed", $RetroBackground, "reset_display"):
+		printerr("unable to connect 'resumed' from 'Ball'")
+
 
 func adriel_touched(_body: Ball):
 	score(-1)

@@ -7,14 +7,14 @@ export(Color) var color
 
 var pause_direction: = Vector2.LEFT
 
-signal resume
+signal resumed
 
 func _ready():
 	material.set_shader_param("targ_color", color)
 
 
 func _process(_delta):
-	if Input.is_action_just_released("ui_accept"):
+	if pause_direction and Input.is_action_just_released("ui_accept"):
 		resume()
 
 
@@ -33,6 +33,6 @@ func pause():
 
 
 func resume():
-	if pause_direction:
-		linear_velocity = pause_direction
-		pause_direction = Vector2.ZERO
+	linear_velocity = pause_direction
+	pause_direction = Vector2.ZERO
+	emit_signal("resumed")
