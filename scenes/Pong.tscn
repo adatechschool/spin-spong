@@ -40,7 +40,7 @@ scale = Vector2( 1, 270 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 240, 135 )
-min_speed = 300
+min_speed = 275
 max_speed = 200
 
 [node name="Border" parent="." instance=ExtResource( 2 )]

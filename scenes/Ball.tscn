@@ -34,6 +34,7 @@ mode = 2
 mass = 0.00102041
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
+continuous_cd = 2
 script = ExtResource( 1 )
 color = Color( 1, 0.988235, 0, 1 )
 
@@ -74,7 +75,7 @@ lifetime = 0.7
 local_coords = false
 texture = ExtResource( 4 )
 emission_shape = 1
-emission_sphere_radius = 5.0
+emission_sphere_radius = 3.0
 gravity = Vector2( 0, 0 )
 linear_accel = -24.24
 scale_amount_random = 0.3
