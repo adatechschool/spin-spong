@@ -27,3 +27,8 @@ func _integrate_forces(_state):
 	if linear_velocity.length() < min_speed:
 		linear_velocity = linear_velocity.normalized() * min_speed
 
+	var angle = linear_velocity.angle_to(Vector2.UP)
+	if angle < PI / 6 and angle > - PI / 6:
+		linear_velocity = Vector2.UP * min_speed
+	if angle + PI < PI / 6 and angle + PI > - PI / 6:
+		linear_velocity = Vector2.DOWN * min_speed
