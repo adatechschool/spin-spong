@@ -34,6 +34,7 @@ mode = 2
 mass = 0.00102041
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
+continuous_cd = 2
 script = ExtResource( 1 )
 color = Color( 1, 0.988235, 0, 1 )
 
