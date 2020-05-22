@@ -5,7 +5,7 @@
 [ext_resource path="res://ShaderColor.shader" type="Shader" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.79037, 48.1166 )
+extents = Vector2( 6.79037, 33.3199 )
 
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
