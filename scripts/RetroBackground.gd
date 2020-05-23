@@ -12,4 +12,3 @@ func _process(delta):
 
 func display_score(coeff: float):
 	target = - Vector2(coeff * get_tree().root.size.x / 2, 0)
-
