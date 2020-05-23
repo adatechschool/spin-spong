@@ -35,7 +35,7 @@ scale = Vector2( 1, 270 )
 scale = Vector2( 1, 270 )
 
 [node name="ScoreLock" parent="ScoreHandlers" instance=ExtResource( 4 )]
-position = Vector2( 240, 0 )
+position = Vector2( 239, 0 )
 scale = Vector2( 1, 270 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
