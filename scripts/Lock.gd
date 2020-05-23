@@ -7,9 +7,9 @@ export(String) var up
 export(String) var down
 export(Color) var color
 
-const speed:= 2000
-const rotation_speed:= 9000
 var input
+const speed:= 2000
+const rotation_speed:= 12000
 
 onready var paddle:= $Paddle as PhysicsBody2D
 
