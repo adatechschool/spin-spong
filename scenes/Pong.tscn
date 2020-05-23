@@ -13,14 +13,14 @@ script = ExtResource( 3 )
 [node name="Paddles" type="Node" parent="."]
 
 [node name="PaddleAdriel" parent="Paddles" instance=ExtResource( 5 )]
-position = Vector2( 40, 135 )
+position = Vector2( 32, 134 )
 rotation_direction = -1
 up = "luc_goes_up"
 down = "luc_goes_down"
 color = Color( 0, 1, 0, 1 )
 
 [node name="PaddleLuc" parent="Paddles" instance=ExtResource( 5 )]
-position = Vector2( 440, 135 )
+position = Vector2( 448, 135 )
 up = "adriel_goes_up"
 down = "adriel_goes_down"
 color = Color( 1, 0, 1, 1 )
@@ -35,7 +35,7 @@ scale = Vector2( 1, 270 )
 scale = Vector2( 1, 270 )
 
 [node name="ScoreLock" parent="ScoreHandlers" instance=ExtResource( 4 )]
-position = Vector2( 240, 0 )
+position = Vector2( 239, 0 )
 scale = Vector2( 1, 270 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]

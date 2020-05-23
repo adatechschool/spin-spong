@@ -42,7 +42,7 @@ func reset_lock(_body: Ball):
 	locked = false
 	if abs(score) >= target:
 		score = 0
-		$Ball.pause()
+		$Ball.set_sleeping(true)
 
 
 func score(point):
