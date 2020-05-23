@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Ball",
 "language": "GDScript",
 "path": "res://scripts/Ball.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://git_api.gdns"
 } ]
 _global_script_class_icons={
-"Ball": ""
+"Ball": "",
+"GitAPI": ""
 }
 
 [application]
@@ -38,6 +44,10 @@ window/size/test_width=960
 window/size/test_height=540
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[gdnative]
+
+singletons=[ "res://git_api.gdnlib" ]
 
 [importer_defaults]
 
