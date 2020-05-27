@@ -17,7 +17,7 @@ func _ready():
 
 func _process(_delta):
 	if sleeping and Input.is_action_just_released("ui_accept"):
-		linear_velocity += Vector2.ZERO
+		linear_velocity += Vector2.ZERO # force ball out of sleep
 		emit_signal("resumed")
 
 

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const speed := 6.0
+export var speed := 6.0
 var target := Vector2.ZERO
 
 

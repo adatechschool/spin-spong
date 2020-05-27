@@ -3,9 +3,8 @@
 [ext_resource path="res://ShaderColor.material" type="Material" id=1]
 [ext_resource path="res://sprites/paddle.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.96334
-height = 58.7538
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.98442, 33.9185 )
 
 [node name="Paddle" type="RigidBody2D"]
 material = ExtResource( 1 )
