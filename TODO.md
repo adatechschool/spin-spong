@@ -1,42 +1,40 @@
-* [!] BUGFIX: la balle sort de l’écran mdr.
+* [!] BUGFIX: ball can glitch through objects and out of the play-field's boundaries.
 
 ## Adriel
 
-* [x] Intégrer la deuxième paddle dans le jeu.
-* [x] Retravailler le système de scoring.
-* [x] Proposer une nomenclature sérieuse pour les nodes…
-* [x] Implémenter le restart du jeu en fonction du score.
-* [x] Implémenter le système de scrolling du fond en fonction du score.
-* [ ] Implémenter la fin de partie visuellement ; quand un joueur gagne
-  * [x] (80%) la balle s’arrête hors de portée de la paddle dans son mouvement naturel
-  * [x] le joueur doit appuyer sur espace pour relancer la balle (toujours selon le mouvement naturel)
-  * [x] le score revient alors à zéro (et le fond suit)
-  * [ ] une couronne de la couleur du gagnant apparaît au centre de l’écran
-* [ ] Implémenter les mécaniques de gameplay
-  * [x] (50%) Quand la balle est proche du vertical, elle suit l’axe vertical
-  * [?] Quand le joueur n’appuie sur aucune touche, la paddle revient contre l’axe vertical
-  * [ ] Système à double vitesse : rapide avec smash, lente avec paddle immobile
-* [ ] Renommer les branches session-{luc,adriel}.
-* [ ] Réorganiser l’arborescence de fichiers (« shaders » et « materials »).
+* [x] Implement 2nd paddle
+* [x] Fix scoring system.
+* [x] Choose and use a proper naming convention for the nodes
+* [x] Implement game restart after reaching a certain score
+* [x] Implement scrolling background based on score
+* [ ] Implement end game's visual elements
+  * [x] (80%) the ball 'realistically' slows and stops out of reach other paddle
+  * [x] Players must press Space to start a new game (it keeps it previous momentum)
+  * [x] Score goes back to zero (and background goes back to center)
+  * [ ] A crown with the color of the winner pops up in the center of the play-field
+* [ ] Implement gameplay mechanics
+  * [x] (50%) When the ball's direction is nearly vertical, it becomes completely vertical 
+  * [?] When no key is pressed, the paddle swings back to its default -vertical- position
+  * [ ] Multiple speeds for the ball : fast when the paddle had momentum (smash) and slow/normal otherwise
+* [ ] Rename 'session' from branches' names -> {luc, adriel}
+* [ ] Reorganize/clean up file structure ("shaders" and "materials").
 
 ## Luc
 
-* [x] Rechercher / expérimenter pour les particules.
-* [x] Implémenter les graphismes dans godot.
-* [x] Implémenter les shaders pour gérer les couleurs des sprites.
-* [x] Implémenter un material pour gérer les couleurs des sprites.
-* [x] (50%) Réfléchir à l’architecture du code pour les particules.
-* [x] (75%) Dessiner la couronne.
-* [ ] Implémenter la couronne.
+* [x] Research / experiment with particles
+* [x] Implement first graphics into the game
+* [x] Implement shader and material to modify sprites' color
+* [x] (60%) Think about code / node structure for handling particles
+* [x] Draw and animate victory crown
+* [ ] Implement victory crown
 * [ ] Polish
   * [ ] vibrations
   * [ ] freeze
-  * [ ] implémenter le système de particules
-  * [ ] effet crosscode?
-* [ ] Implémenter les autres particules
-  * [ ] impact entre « Ball » et « Border »
-  * [ ] impact entre « Ball » et « Paddle »
-  * [ ] impact but
-  * [?] impact but final
-  * [?] trail des paddles
-* [?] Réécrire la TODO en anglais (je te déteste diana).
+  * [ ] Crosscode effect?
+* [ ] Implement particle system
+  * [ ] "Ball" - "Border" impact
+  * [ ] "Ball" - "Paddle" impact
+  * [ ] goal impact
+  * [?] victory impact
+  * [?] paddles' trails
+* [x] Translate this TO-DO list to English (I hate you Diana).
