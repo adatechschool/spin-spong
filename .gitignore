@@ -1,5 +1,5 @@
 # Ignore godot files
-*.import
+.import/
 export.cfg
 export_presets.cfg
 
