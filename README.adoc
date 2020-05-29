@@ -2,8 +2,20 @@
 
 == Introduction
 
-WARNING: lien temporaire d’une https://drop.chapril.org/download/0c86a17d991def93/#vsvwF9FUE0mhO_A3cgI8Fw[vidéo du jeu].
+Un lien temporaire d’une https://drop.chapril.org/download/0c86a17d991def93/#vsvwF9FUE0mhO_A3cgI8Fw[vidéo du jeu].
 
 == Lecture de code
 
 == Mob programming
+
+Kékéçé le
+https://fr.wikipedia.org/wiki/Programmation_en_groupe[mob programming] ?
+
+Dans le cadre de la session de code collective, nous proposons des objectifs réalisables::
+
+* Utiliser l’instanciation de nodes pour implémenter un effet de particule.
+* Utiliser les nodes d’animation pour implémenter l’animation d’une couronne (déjà faite) en fin de partie.
+* Implémenter des effets sonores pour les impacts de la balle.
+* Utiliser l’« observer pattern » pour donner différentes vitesses à la balle en fonction du mouvement de la paddle.
+
+NOTE: Il s’agit là de propositions, d’autres choses sont possibles et accessibles.
