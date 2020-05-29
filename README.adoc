@@ -2,8 +2,6 @@
 
 == Introduction
 
-Qu’est-ce qu’un jeu vidéo::
-
 Qu’est-ce qu’un moteur de jeu-vidéo::
 
 * Logiciel qui facilite le développement de jeux
@@ -20,7 +18,7 @@ Godot par rapport aux autres moteurs::
 * Développement actif
 * Gain en popularité
 
-d’autres moteurs populaires sont :
+D’autres moteurs populaires::
 
 * Unity
 * Unreal engine
@@ -35,6 +33,16 @@ Notre jeu vidéo::
 Un lien temporaire d’une https://drop.chapril.org/download/0c86a17d991def93/#vsvwF9FUE0mhO_A3cgI8Fw[vidéo du jeu].
 
 == Lecture de code
+
+L’exercice de lecture de code porte sur le script `scripts/Lock.gd`.
+
+=== Déroulement
+
+. Partager une vue du fichier en désactivant la coloration syntaxique
+. Une première étape consiste à se familiariser avec la syntaxe, sans se préocupper du sens.
+** Identification des mots réservés, noms de variables, de fonctions, valeurs littérales, etc.
+. Une seconde étape (en fonction du temps) serait de remettre brièvement ce bout de code en contexte.
+** à quoi il sert ?
 
 == Mob programming
 
