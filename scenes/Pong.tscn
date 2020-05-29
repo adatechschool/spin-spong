@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/PaddleLock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/RetroBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://CrownAnimation.tres" type="SpriteFrames" id=7]
-[ext_resource path="res://scripts/AnimatedSprite.gd" type="Script" id=8]
+[ext_resource path="res://scenes/AnimatedSprite.gd" type="Script" id=8]
 
 [node name="Pong" type="Node"]
 script = ExtResource( 3 )
@@ -52,8 +52,7 @@ max_speed = 200
 [node name="RetroBackground" parent="." instance=ExtResource( 6 )]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 240, 135 )
-scale = Vector2( 0.989868, 0.984239 )
+position = Vector2( 239, 137.485 )
 frames = ExtResource( 7 )
-frame = 66
+frame = 39
 script = ExtResource( 8 )
