@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Border.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/PaddleLock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/RetroBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://CrownAnimation.tres" type="SpriteFrames" id=7]
+[ext_resource path="res://scripts/AnimatedSprite.gd" type="Script" id=8]
 
 [node name="Pong" type="Node"]
 script = ExtResource( 3 )
@@ -51,6 +52,8 @@ max_speed = 200
 [node name="RetroBackground" parent="." instance=ExtResource( 6 )]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 135 )
+scale = Vector2( 0.989868, 0.984239 )
 frames = ExtResource( 7 )
-animation = "New Anim 1"
-playing = true
+frame = 66
+script = ExtResource( 8 )
