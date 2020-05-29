@@ -49,4 +49,8 @@ func score(point):
 	if not locked:
 		score += point
 		locked = true
+		set_display()
+
+
+func set_display():
 	$RetroBackground.display_score(float(score) / float(target))
