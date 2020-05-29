@@ -6,19 +6,19 @@ Qu’est-ce qu’un jeu vidéo::
 
 Qu’est-ce qu’un moteur de jeu-vidéo::
 
-* logiciel qui facilite le développement de jeux
-* manipulation d’image facilité
-* manipulation de son
-* gestion avancée des évènements (claviers, souris, manettes…)
-* éventuellement accessible pour des personnes qui ne dév pas
+* Logiciel qui facilite le développement de jeux
+* Manipulation d’image facilité
+* Manipulation de son
+* Gestion avancée des évènements (claviers, souris, manettes…)
+* Éventuellement accessible pour des personnes qui ne dév pas
 
 Godot par rapport aux autres moteurs::
 
-* logiciel libre
-* assez vieux, code libre récemment
-* facile à prendre en main
-* développement actif
-* gain en popularité
+* Logiciel libre
+* Assez vieux, code libre récemment
+* Facile à prendre en main
+* Développement actif
+* Gain en popularité
 
 d’autres moteurs populaires sont :
 
@@ -26,6 +26,11 @@ d’autres moteurs populaires sont :
 * Unreal engine
 * GameMaker
 * …
+
+Notre jeu vidéo::
+
+* Tentative d’apprendre godot (on débutait y’a pas si longtemps)
+* Partir d’un jeu simple (le pong) avec une idée de « game design » originale.
 
 Un lien temporaire d’une https://drop.chapril.org/download/0c86a17d991def93/#vsvwF9FUE0mhO_A3cgI8Fw[vidéo du jeu].
 
