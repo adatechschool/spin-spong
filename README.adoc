@@ -19,3 +19,13 @@ Dans le cadre de la session de code collective, nous proposons des objectifs ré
 * Utiliser l’« observer pattern » pour donner différentes vitesses à la balle en fonction du mouvement de la paddle.
 
 NOTE: Il s’agit là de propositions, d’autres choses sont possibles et accessibles.
+
+=== Déroulement
+
+. Faire un fork du projet sur `adatechschool` pour que tout le monde puisse y `push`.
+. Une personne partage son écran, les autres lui disent quoi faire.
+. On change régulièrement la personne qui partage son écran (10-15min?).
+. L’objectif est de coder tout·es ensemble sur la même fonctionnalité.
+. Si on ne finit pas l’objectif avant la fin de la session, ce n’est pas grave.
+. On prend garde à répondre aux questions de tout·es et laisser chacun·e essayer ses idées.
+. Créer une `pull request` de `adatechschool/spin-spong` vers `Leirda01/spin-spong`.
