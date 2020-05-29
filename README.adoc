@@ -2,6 +2,31 @@
 
 == Introduction
 
+Qu’est-ce qu’un jeu vidéo::
+
+Qu’est-ce qu’un moteur de jeu-vidéo::
+
+* logiciel qui facilite le développement de jeux
+* manipulation d’image facilité
+* manipulation de son
+* gestion avancée des évènements (claviers, souris, manettes…)
+* éventuellement accessible pour des personnes qui ne dév pas
+
+Godot par rapport aux autres moteurs::
+
+* logiciel libre
+* assez vieux, code libre récemment
+* facile à prendre en main
+* développement actif
+* gain en popularité
+
+d’autres moteurs populaires sont :
+
+* Unity
+* Unreal engine
+* GameMaker
+* …
+
 Un lien temporaire d’une https://drop.chapril.org/download/0c86a17d991def93/#vsvwF9FUE0mhO_A3cgI8Fw[vidéo du jeu].
 
 == Lecture de code
@@ -15,10 +40,12 @@ Dans le cadre de la session de code collective, nous proposons des objectifs ré
 
 * Utiliser l’instanciation de nodes pour implémenter un effet de particule.
 * Utiliser les nodes d’animation pour implémenter l’animation d’une couronne (déjà faite) en fin de partie.
-* Implémenter des effets sonores pour les impacts de la balle.
+* Utiliser les nodes de gestion de son pour implémenter des effets sonores pour les impacts de la balle.
 * Utiliser l’« observer pattern » pour donner différentes vitesses à la balle en fonction du mouvement de la paddle.
 
 NOTE: Il s’agit là de propositions, d’autres choses sont possibles et accessibles.
+
+On discute brièvement (5min?) des options que l’on a (même celles qui ne sont pas dans cette liste!) et on choisit un objectif que l’on prend pour cette session.
 
 === Déroulement
 
